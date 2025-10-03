@@ -13,22 +13,18 @@ class AppIconText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppLayout.getWidth(10)),
-          color: Colors.white),
+        borderRadius: BorderRadius.circular(AppLayout.getWidth(context, 10)),
+        color: Colors.white,
+      ),
       padding: EdgeInsets.symmetric(
-          vertical: AppLayout.getHeight(12),
-          horizontal: AppLayout.getWidth(12)),
+        vertical: AppLayout.getHeight(context, 12),
+        horizontal: AppLayout.getWidth(context, 12),
+      ),
       child: Row(
         children: [
-          Icon(
-            icon,
-            color: const Color(0xFFBFC2DF),
-          ),
-          Gap(AppLayout.getWidth(10)),
-          Text(
-            text,
-            style: Styles.textStyle,
-          )
+          Icon(icon, color: const Color(0xFFBFC2DF)),
+          Gap(AppLayout.getWidth(context, 10)),
+          Text(text, style: Styles.textStyle),
         ],
       ),
     );

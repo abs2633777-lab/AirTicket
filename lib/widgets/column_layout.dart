@@ -9,12 +9,13 @@ class AppColumnLayout extends StatelessWidget {
   final CrossAxisAlignment alignment;
   final bool? isColor;
 
-  const AppColumnLayout(
-      {super.key,
-        required this.firstText,
-        required this.secondText,
-        required this.alignment,
-        this.isColor});
+  const AppColumnLayout({
+    super.key,
+    required this.firstText,
+    required this.secondText,
+    required this.alignment,
+    this.isColor,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,7 @@ class AppColumnLayout extends StatelessWidget {
               ? Styles.headLineStyle3.copyWith(color: Colors.white)
               : Styles.headLineStyle3,
         ),
-        Gap(AppLayout.getHeight(5)),
+        Gap(AppLayout.getHeight(context, 5)),
         Text(
           secondText,
           style: isColor == true
